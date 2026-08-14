@@ -3491,3 +3491,867 @@ button {
         font-size: 21px;
     }
    }
+/* =========================================
+   PART 4 : REVIEWS SECTION
+========================================= */
+
+.reviews-section {
+
+    width: 100%;
+
+    background: #FFFDF5;
+
+    padding: 34px 25px 36px;
+
+    border-top: 1px solid #F0DFC5;
+}
+
+
+.reviews-container {
+
+    max-width: 1050px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   REVIEWS HEADING
+========================================= */
+
+.reviews-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    text-align: center;
+
+    margin-bottom: 23px;
+}
+
+
+.reviews-heading h2 {
+
+    font-family: var(--serif);
+
+    color: var(--deep-red);
+
+    font-size: 27px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+}
+
+
+.reviews-heading p {
+
+    font-family: Arial, sans-serif;
+
+    color: var(--dark-green);
+
+    font-size: 10.5px;
+
+    margin-top: 5px;
+}
+
+
+.review-line {
+
+    width: 65px;
+
+    height: 1px;
+
+    background: var(--orange);
+
+    position: relative;
+}
+
+
+.review-line::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    top: -8px;
+
+    color: var(--turmeric);
+
+    font-size: 10px;
+}
+
+
+.review-line:first-child::after {
+
+    right: -2px;
+}
+
+
+.review-line:last-child::after {
+
+    left: -2px;
+}
+
+
+/* =========================================
+   REVIEW GRID
+========================================= */
+
+.reviews-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+
+/* =========================================
+   REVIEW CARD
+========================================= */
+
+.review-card {
+
+    position: relative;
+
+    background: var(--cream);
+
+    border: 1px solid #EEDCC1;
+
+    border-radius: 7px;
+
+    padding: 18px 18px 16px;
+
+    min-height: 160px;
+
+    box-shadow:
+        0 4px 12px rgba(83, 43, 15, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.review-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 22px rgba(83, 43, 15, 0.11);
+}
+
+
+/* Featured middle card */
+
+.featured-review {
+
+    border-top: 3px solid var(--orange);
+
+    background: #FFF8E8;
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.quote-mark {
+
+    position: absolute;
+
+    top: 7px;
+
+    right: 14px;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    line-height: 1;
+
+    color: rgba(166, 27, 27, 0.12);
+}
+
+
+/* =========================================
+   STARS
+========================================= */
+
+.stars {
+
+    color: var(--turmeric);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 9px;
+}
+
+
+/* =========================================
+   REVIEW TEXT
+========================================= */
+
+.review-text {
+
+    max-width: 270px;
+
+    font-family: Georgia, serif;
+
+    color: #4C372B;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    font-style: italic;
+
+    min-height: 53px;
+}
+
+
+/* =========================================
+   REVIEW PERSON
+========================================= */
+
+.review-person {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 13px;
+
+    padding-top: 10px;
+
+    border-top: 1px solid #EBDCC8;
+}
+
+
+.person-avatar {
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: var(--deep-red);
+
+    color: var(--turmeric);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 800;
+}
+
+
+.review-card:nth-child(2) .person-avatar {
+
+    background: var(--orange);
+
+    color: white;
+}
+
+
+.review-card:nth-child(3) .person-avatar {
+
+    background: var(--leaf-green);
+
+    color: white;
+}
+
+
+.review-person h3 {
+
+    font-family: var(--serif);
+
+    color: var(--deep-red);
+
+    font-size: 10.5px;
+
+    font-weight: 800;
+}
+
+
+.review-person span {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-family: Arial, sans-serif;
+
+    color: #806D5E;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.final-cta {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 220px;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(242, 183, 5, 0.22),
+            transparent 27%
+        ),
+
+        linear-gradient(
+            135deg,
+            var(--deep-red),
+            var(--bright-red) 55%,
+            #7E0909
+        );
+
+    color: white;
+}
+
+
+/* =========================================
+   CTA CONTENT
+========================================= */
+
+.cta-container {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 31px 25px 35px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   CTA ICON
+========================================= */
+
+.cta-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--turmeric);
+
+    color: #5D3300;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.16);
+
+    margin-bottom: 9px;
+}
+
+
+/* =========================================
+   CTA SMALL TITLE
+========================================= */
+
+.cta-small-title {
+
+    font-family: Arial, sans-serif;
+
+    color: #FFD96A;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 2.3px;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================================
+   CTA HEADING
+========================================= */
+
+.cta-container h2 {
+
+    font-family: var(--serif);
+
+    color: white;
+
+    font-size: 31px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================================
+   CTA DESCRIPTION
+========================================= */
+
+.cta-description {
+
+    max-width: 510px;
+
+    margin-top: 9px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10.5px;
+
+    line-height: 1.6;
+
+    color: #FFEBDD;
+}
+
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+
+.cta-button {
+
+    margin-top: 17px;
+
+    min-width: 145px;
+
+    height: 35px;
+
+    padding: 0 17px;
+
+    border-radius: 5px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    background: var(--turmeric);
+
+    color: #4A2900;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.16);
+
+    transition: 0.25s ease;
+}
+
+
+.cta-button span {
+
+    font-size: 14px;
+
+    line-height: 1;
+
+    transition: transform 0.2s ease;
+}
+
+
+.cta-button:hover {
+
+    background: #FFD13D;
+
+    transform: translateY(-2px);
+}
+
+
+.cta-button:hover span {
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   CTA DECORATIONS
+========================================= */
+
+.cta-decoration {
+
+    position: absolute;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    filter:
+        drop-shadow(
+            0 6px 5px rgba(0, 0, 0, 0.14)
+        );
+}
+
+
+.cta-leaf-left {
+
+    left: 6%;
+
+    bottom: 18px;
+
+    font-size: 53px;
+
+    transform: rotate(-27deg);
+
+    opacity: 0.72;
+}
+
+
+.cta-chilli-right {
+
+    right: 7%;
+
+    bottom: 15px;
+
+    font-size: 47px;
+
+    transform: rotate(20deg);
+
+    opacity: 0.82;
+}
+
+
+.cta-spice-top {
+
+    top: 25px;
+
+    left: 16%;
+
+    color: var(--turmeric);
+
+    font-size: 19px;
+
+    opacity: 0.75;
+}
+
+
+/* =========================================
+   EXTRA CTA DECORATIVE DOTS
+========================================= */
+
+.final-cta::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+
+    height: 100px;
+
+    left: 0;
+
+    bottom: 0;
+
+    opacity: 0.3;
+
+    background:
+
+        radial-gradient(
+            circle,
+            var(--turmeric) 1.3px,
+            transparent 1.8px
+        );
+
+    background-size: 13px 13px;
+}
+
+
+.final-cta::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+
+    height: 100px;
+
+    right: 0;
+
+    top: 0;
+
+    opacity: 0.22;
+
+    background:
+
+        radial-gradient(
+            circle,
+            var(--orange) 1.3px,
+            transparent 1.8px
+        );
+
+    background-size: 13px 13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .reviews-grid {
+
+        gap: 11px;
+    }
+
+
+    .review-card {
+
+        padding: 15px;
+
+        min-height: 165px;
+    }
+
+
+    .review-text {
+
+        font-size: 10px;
+    }
+
+
+    .cta-container h2 {
+
+        font-size: 27px;
+    }
+
+
+    .cta-leaf-left {
+
+        left: 2%;
+    }
+
+
+    .cta-chilli-right {
+
+        right: 2%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .reviews-section {
+
+        padding: 30px 16px;
+    }
+
+
+    .reviews-heading {
+
+        gap: 8px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .reviews-heading h2 {
+
+        font-size: 23px;
+    }
+
+
+    .reviews-heading p {
+
+        font-size: 9px;
+    }
+
+
+    .review-line {
+
+        width: 28px;
+    }
+
+
+    .reviews-grid {
+
+        grid-template-columns: 1fr;
+
+        max-width: 430px;
+
+        margin: auto;
+
+        gap: 12px;
+    }
+
+
+    .review-card {
+
+        min-height: auto;
+
+        padding: 18px;
+
+        text-align: center;
+    }
+
+
+    .review-text {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .review-person {
+
+        justify-content: center;
+
+        text-align: left;
+    }
+
+
+    .final-cta {
+
+        min-height: 245px;
+    }
+
+
+    .cta-container {
+
+        padding:
+
+            30px 20px
+
+            38px;
+    }
+
+
+    .cta-container h2 {
+
+        font-size: 25px;
+
+        max-width: 350px;
+    }
+
+
+    .cta-description {
+
+        max-width: 370px;
+
+        font-size: 9.5px;
+    }
+
+
+    .cta-leaf-left {
+
+        left: -9px;
+
+        bottom: 8px;
+
+        font-size: 36px;
+    }
+
+
+    .cta-chilli-right {
+
+        right: -7px;
+
+        bottom: 8px;
+
+        font-size: 34px;
+    }
+
+
+    .cta-spice-top {
+
+        left: 7%;
+
+        top: 15px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .reviews-heading h2 {
+
+        font-size: 20px;
+    }
+
+
+    .review-line {
+
+        width: 18px;
+    }
+
+
+    .cta-container h2 {
+
+        font-size: 22px;
+    }
+
+
+    .cta-description {
+
+        font-size: 9px;
+    }
+                        }
