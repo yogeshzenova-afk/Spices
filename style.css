@@ -1,0 +1,1089 @@
+/* =========================================
+   NAMMA SPICES
+   PART 1 : HEADER + HERO
+========================================= */
+
+
+/* =========================================
+   GLOBAL VARIABLES
+========================================= */
+
+:root {
+
+    --deep-red: #A61B1B;
+    --bright-red: #8F0F0F;
+
+    --orange: #E87518;
+    --turmeric: #F2B705;
+
+    --leaf-green: #3F7D20;
+    --dark-green: #174A13;
+
+    --cream: #FFF8E8;
+    --cream-dark: #F8EBD2;
+
+    --dark-text: #241A14;
+
+    --white: #FFFFFF;
+
+    --serif: "Roboto Slab", Georgia, serif;
+    --body-font: "Lora", Georgia, serif;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    background: var(--cream);
+    color: var(--dark-text);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   ANNOUNCEMENT BAR
+========================================= */
+
+.announcement-bar {
+
+    width: 100%;
+
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    background: var(--turmeric);
+
+    color: #3A2100;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.1px;
+}
+
+.truck-icon {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+
+    width: 100%;
+
+    height: 58px;
+
+    background: var(--bright-red);
+
+    color: var(--white);
+
+    position: relative;
+
+    z-index: 100;
+}
+
+
+.nav-container {
+
+    max-width: 1180px;
+
+    height: 100%;
+
+    margin: auto;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.brand-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    min-width: 170px;
+}
+
+
+.logo-spice {
+
+    font-size: 29px;
+
+    line-height: 1;
+
+    transform: rotate(-18deg);
+}
+
+
+.logo-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 0.88;
+
+    font-family: var(--serif);
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+.logo-text span:first-child {
+
+    font-size: 19px;
+
+    color: var(--white);
+}
+
+
+.logo-text .spices-word {
+
+    font-size: 15px;
+
+    color: var(--turmeric);
+
+    margin-top: 4px;
+
+    letter-spacing: 1.2px;
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
+.navigation {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 31px;
+
+    margin-left: 25px;
+}
+
+
+.navigation a {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    color: var(--white);
+
+    transition: 0.25s ease;
+}
+
+
+.navigation a:hover {
+
+    color: var(--turmeric);
+}
+
+
+.navigation a.active {
+
+    color: var(--turmeric);
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   NAVIGATION ICONS
+========================================= */
+
+.nav-icons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+.icon-button {
+
+    width: 25px;
+    height: 25px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    position: relative;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+
+.icon-button svg {
+
+    width: 22px;
+    height: 22px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+.cart-count {
+
+    position: absolute;
+
+    top: -7px;
+
+    right: -8px;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: var(--turmeric);
+
+    color: #4A2A00;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    min-height: 355px;
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 43% 57%;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 72% 35%,
+            rgba(232, 117, 24, 0.17),
+            transparent 31%
+        ),
+
+        radial-gradient(
+            circle at 88% 75%,
+            rgba(166, 27, 27, 0.13),
+            transparent 28%
+        ),
+
+        var(--cream);
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    padding:
+
+        38px
+
+        15px
+
+        38px
+
+        max(30px, calc((100vw - 1180px) / 2 + 25px));
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+
+/* =========================================
+   HERO BRAND TITLE
+========================================= */
+
+.hero-brand-title {
+
+    position: relative;
+}
+
+
+.hero-brand-title h1 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(43px, 5vw, 64px);
+
+    line-height: 0.88;
+
+    letter-spacing: 1px;
+
+    color: var(--deep-red);
+
+    font-weight: 800;
+}
+
+
+.spices-title {
+
+    position: relative;
+
+    display: inline-block;
+
+    margin-top: 5px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(41px, 4.7vw, 61px);
+
+    line-height: 1;
+
+    color: var(--dark-green);
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+.title-leaf {
+
+    position: absolute;
+
+    color: var(--leaf-green);
+
+    font-family: Georgia, serif;
+
+    font-size: 34px;
+}
+
+
+.left-leaf {
+
+    left: -38px;
+
+    top: 4px;
+
+    transform: rotate(-30deg);
+}
+
+
+.right-leaf {
+
+    right: -38px;
+
+    top: 4px;
+
+    transform: rotate(30deg);
+}
+
+
+/* =========================================
+   TAGLINE
+========================================= */
+
+.hero-tagline {
+
+    margin-top: 13px;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    font-style: italic;
+
+    font-weight: 700;
+
+    color: #6D2C1B;
+
+    letter-spacing: 0.1px;
+}
+
+
+/* =========================================
+   HERO DIVIDER
+========================================= */
+
+.hero-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: 185px;
+
+    margin: 9px 0 11px;
+}
+
+
+.hero-divider span {
+
+    height: 1px;
+
+    flex: 1;
+
+    background: var(--orange);
+}
+
+
+.hero-divider i {
+
+    font-size: 11px;
+
+    color: var(--orange);
+
+    font-style: normal;
+}
+
+
+/* =========================================
+   HERO DESCRIPTION
+========================================= */
+
+.hero-description {
+
+    max-width: 390px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    color: #4C3629;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 18px;
+}
+
+
+.btn {
+
+    min-height: 37px;
+
+    padding: 0 19px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 6px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+
+.btn-primary {
+
+    color: white;
+
+    background: var(--deep-red);
+
+    border: 1px solid var(--deep-red);
+
+    box-shadow: 0 5px 12px rgba(166, 27, 27, 0.18);
+}
+
+
+.btn-primary:hover {
+
+    background: var(--bright-red);
+
+    transform: translateY(-2px);
+}
+
+
+.btn-secondary {
+
+    color: var(--deep-red);
+
+    background: transparent;
+
+    border: 1px solid var(--orange);
+}
+
+
+.btn-secondary:hover {
+
+    background: var(--orange);
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.hero-image-wrapper {
+
+    position: relative;
+
+    min-height: 355px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.hero-image-wrapper::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    right: -80px;
+
+    top: -100px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(232, 117, 24, 0.42),
+            rgba(166, 27, 27, 0.08) 55%,
+            transparent 70%
+        );
+}
+
+
+.hero-image {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(650px, 100%);
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.hero-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    display: block;
+
+    filter: drop-shadow(
+        0 20px 18px rgba(78, 28, 8, 0.14)
+    );
+}
+
+
+/* =========================================
+   ORANGE SPLASH
+========================================= */
+
+.orange-splash {
+
+    position: absolute;
+
+    width: 340px;
+
+    height: 240px;
+
+    right: 4%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background:
+
+        radial-gradient(
+            ellipse,
+            rgba(232, 117, 24, 0.3),
+            transparent 68%
+        );
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   FLOATING DECORATIONS
+========================================= */
+
+.floating-spice {
+
+    position: absolute;
+
+    z-index: 5;
+
+    font-size: 23px;
+
+    filter: drop-shadow(
+        0 5px 5px rgba(0,0,0,0.12)
+    );
+}
+
+
+.spice-one {
+
+    right: 7%;
+
+    top: 21%;
+
+    transform: rotate(-20deg);
+}
+
+
+.spice-two {
+
+    right: 17%;
+
+    bottom: 13%;
+
+    font-size: 20px;
+
+    color: var(--turmeric);
+}
+
+
+.spice-three {
+
+    right: 45%;
+
+    top: 13%;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   HERO BACKGROUND DECORATION
+========================================= */
+
+.hero-spice-dots {
+
+    position: absolute;
+
+    width: 100px;
+
+    height: 100px;
+
+    left: 42%;
+
+    bottom: -35px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            var(--turmeric) 1.5px,
+            transparent 2px
+        );
+
+    background-size: 13px 13px;
+
+    opacity: 0.35;
+
+    z-index: 1;
+}
+
+
+.hero-leaf {
+
+    position: absolute;
+
+    opacity: 0.13;
+
+    font-size: 70px;
+
+    z-index: 1;
+}
+
+
+.leaf-one {
+
+    left: 2%;
+
+    bottom: 2%;
+
+    transform: rotate(-25deg);
+}
+
+
+.leaf-two {
+
+    left: 38%;
+
+    top: 8%;
+
+    transform: rotate(35deg);
+
+    font-size: 45px;
+}
+
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navigation {
+
+        gap: 15px;
+    }
+
+    .navigation a {
+
+        font-size: 11px;
+    }
+
+    .brand-logo {
+
+        min-width: auto;
+    }
+
+    .nav-icons {
+
+        gap: 8px;
+    }
+
+    .hero {
+
+        grid-template-columns: 46% 54%;
+    }
+
+    .hero-content {
+
+        padding-left: 30px;
+    }
+
+    .hero-description {
+
+        max-width: 330px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .announcement-bar {
+
+        height: 28px;
+
+        font-size: 10px;
+    }
+
+
+    .navbar {
+
+        height: auto;
+
+        min-height: 64px;
+    }
+
+
+    .nav-container {
+
+        padding: 12px 18px;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+
+    .brand-logo {
+
+        flex: 1;
+    }
+
+
+    .navigation {
+
+        order: 3;
+
+        width: 100%;
+
+        margin: 0;
+
+        overflow-x: auto;
+
+        padding: 3px 0 7px;
+
+        gap: 22px;
+
+        scrollbar-width: none;
+    }
+
+
+    .navigation::-webkit-scrollbar {
+
+        display: none;
+    }
+
+
+    .navigation a {
+
+        white-space: nowrap;
+
+        font-size: 11px;
+    }
+
+
+    .hero {
+
+        display: flex;
+
+        flex-direction: column;
+
+        min-height: auto;
+    }
+
+
+    .hero-content {
+
+        padding: 48px 24px 25px;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .hero-brand-title {
+
+        margin-top: 5px;
+    }
+
+
+    .hero-brand-title h1 {
+
+        font-size: 48px;
+    }
+
+
+    .spices-title {
+
+        font-size: 46px;
+    }
+
+
+    .hero-tagline {
+
+        font-size: 14px;
+    }
+
+
+    .hero-description {
+
+        max-width: 400px;
+
+        font-size: 12px;
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .hero-image-wrapper {
+
+        min-height: 300px;
+
+        width: 100%;
+    }
+
+
+    .hero-image {
+
+        width: 100%;
+
+        height: 300px;
+    }
+
+
+    .orange-splash {
+
+        right: 50%;
+
+        transform: translate(50%, -50%);
+    }
+
+
+    .hero-leaf {
+
+        display: none;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .hero-brand-title h1 {
+
+        font-size: 42px;
+    }
+
+    .spices-title {
+
+        font-size: 40px;
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .btn {
+
+        width: 100%;
+
+        max-width: 240px;
+    }
+      }
