@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Namma Spices</title>
+
+    <style>
+        /* =========================
+           RESET
+        ========================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fffaf0;
+            color: #2b1b12;
+            line-height: 1.6;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        /* =========================
+           ABOUT HERO
+        ========================== */
+
+        .about-hero {
+            min-height: 65vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    rgba(92, 20, 10, 0.82),
+                    rgba(176, 55, 12, 0.78)
+                ),
+                url("images/spices-hero.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(
+                circle at center,
+                transparent 20%,
+                rgba(0, 0, 0, 0.25)
+            );
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            color: #ffffff;
+        }
+
+        .about-small-title {
+            display: inline-block;
+            color: #ffd54a;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .about-hero h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .about-hero h1 span {
+            color: #ffd54a;
+        }
+
+        .about-hero p {
+            max-width: 680px;
+            margin: auto;
+            font-size: 18px;
+            color: #fff5df;
+        }
+
+        /* =========================
+           BRAND STORY
+        ========================== */
+
+        .story-section {
+            padding: 100px 7%;
+            background: #fffaf0;
+        }
+
+        .story-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .story-image {
+            position: relative;
+        }
+
+        .story-image img {
+            height: 520px;
+            object-fit: cover;
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(74, 29, 12, 0.18);
+        }
+
+        .story-image::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: #f5b82e;
+            border-radius: 20px;
+            left: -20px;
+            bottom: -20px;
+            z-index: -1;
+        }
+
+        .story-content .section-label {
+            color: #d74717;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .story-content h2 {
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.15;
+            color: #4a1f12;
+            margin-bottom: 25px;
+        }
+
+        .story-content h2 span {
+            color: #d74717;
+        }
+
+        .story-content p {
+            color: #6d574d;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+
+        .story-highlight {
+            margin-top: 30px;
+            padding: 20px 25px;
+            border-left: 5px solid #f5b82e;
+            background: #fff1c7;
+            border-radius: 0 12px 12px 0;
+            color: #4a1f12;
+            font-weight: 600;
+        }
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 800px) {
+
+            .about-hero {
+                min-height: 55vh;
+                padding: 70px 20px;
+            }
+
+            .about-hero p {
+                font-size: 16px;
+            }
+
+            .story-section {
+                padding: 70px 6%;
+            }
+
+            .story-container {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .story-image img {
+                height: 400px;
+            }
+
+            .story-image::before {
+                width: 70px;
+                height: 70px;
+                left: -10px;
+                bottom: -10px;
+            }
+
+            .story-content h2 {
+                font-size: 38px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .about-hero h1 {
+                font-size: 44px;
+            }
+
+            .about-hero p {
+                font-size: 15px;
+            }
+
+            .story-image img {
+                height: 330px;
+                border-radius: 18px;
+            }
+
+            .story-content h2 {
+                font-size: 32px;
+            }
+
+            .story-content p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         ABOUT HERO
+    ========================== -->
+
+    <section class="about-hero">
+
+        <div class="about-hero-content">
+
+            <span class="about-small-title">
+                About Namma Spices
+            </span>
+
+            <h1>
+                Bringing the Taste of <span>Tradition</span>
+            </h1>
+
+            <p>
+                Authentic spices, carefully selected and beautifully blended
+                to bring the rich flavors of India straight to your kitchen.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BRAND STORY
+    ========================== -->
+
+    <section class="story-section">
+
+        <div class="story-container">
+
+            <!-- IMAGE -->
+
+            <div class="story-image">
+
+                <img
+                    src="images/spices-story.jpg"
+                    alt="Fresh Indian spices"
+                >
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="story-content">
+
+                <div class="section-label">
+                    Our Story
+                </div>
+
+                <h2>
+                    Rooted in <span>Tradition.</span>
+                    Made for Today.
+                </h2>
+
+                <p>
+                    At Namma Spices, we believe that great food begins
+                    with great spices. Our journey started with a simple
+                    passion — to bring authentic Indian flavors into
+                    everyday kitchens.
+                </p>
+
+                <p>
+                    From carefully selected ingredients to thoughtfully
+                    prepared blends, every Namma Spices product is created
+                    with attention to quality, freshness and traditional
+                    taste.
+                </p>
+
+                <div class="story-highlight">
+                    "A little spice can turn an ordinary meal into
+                    something unforgettable."
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+<style>
+    /* =========================
+       OUR VALUES
+    ========================== */
+
+    .values-section {
+        padding: 100px 7%;
+        background: #4a1f12;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .values-header {
+        max-width: 750px;
+        margin: 0 auto 55px;
+    }
+
+    .values-header .section-label {
+        color: #ffd54a;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    .values-header h2 {
+        font-size: clamp(34px, 5vw, 52px);
+        line-height: 1.15;
+        margin-bottom: 18px;
+    }
+
+    .values-header h2 span {
+        color: #f5b82e;
+    }
+
+    .values-header p {
+        color: #eadbd2;
+        font-size: 17px;
+    }
+
+    .values-grid {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .value-card {
+        padding: 40px 28px;
+        background: #5b2818;
+        border: 1px solid rgba(255, 213, 74, 0.2);
+        border-radius: 20px;
+        transition: 0.3s ease;
+    }
+
+    .value-card:hover {
+        transform: translateY(-8px);
+        background: #682d1a;
+    }
+
+    .value-icon {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #f5b82e;
+        color: #4a1f12;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .value-card h3 {
+        font-size: 23px;
+        margin-bottom: 12px;
+        color: #ffffff;
+    }
+
+    .value-card p {
+        color: #dfccc1;
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       QUALITY PROMISE
+    ========================== */
+
+    .quality-section {
+        padding: 100px 7%;
+        background: #fffaf0;
+    }
+
+    .quality-container {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+        align-items: center;
+    }
+
+    .quality-content .section-label {
+        color: #d74717;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    .quality-content h2 {
+        font-size: clamp(34px, 5vw, 52px);
+        line-height: 1.15;
+        color: #4a1f12;
+        margin-bottom: 25px;
+    }
+
+    .quality-content h2 span {
+        color: #d74717;
+    }
+
+    .quality-content p {
+        color: #6d574d;
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+
+    .quality-list {
+        list-style: none;
+        margin-top: 25px;
+    }
+
+    .quality-list li {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 18px;
+        color: #4a1f12;
+        font-weight: 600;
+    }
+
+    .quality-check {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #d74717;
+        color: #ffffff;
+        border-radius: 50%;
+        font-size: 14px;
+    }
+
+    .quality-image {
+        position: relative;
+    }
+
+    .quality-image img {
+        height: 500px;
+        object-fit: cover;
+        border-radius: 25px;
+        box-shadow: 0 20px 50px rgba(74, 29, 12, 0.18);
+    }
+
+
+    /* =========================
+       WHY CHOOSE US
+    ========================== */
+
+    .why-section {
+        padding: 100px 7%;
+        background: #fff1c7;
+        text-align: center;
+    }
+
+    .why-container {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .why-section .section-label {
+        color: #d74717;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    .why-section h2 {
+        font-size: clamp(34px, 5vw, 50px);
+        color: #4a1f12;
+        margin-bottom: 45px;
+    }
+
+    .why-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .why-item {
+        background: #ffffff;
+        padding: 30px 18px;
+        border-radius: 18px;
+    }
+
+    .why-number {
+        font-size: 35px;
+        font-weight: 800;
+        color: #d74717;
+        margin-bottom: 10px;
+    }
+
+    .why-item h3 {
+        font-size: 18px;
+        color: #4a1f12;
+    }
+
+
+    /* =========================
+       FINAL CTA
+    ========================== */
+
+    .about-cta {
+        padding: 100px 7%;
+        text-align: center;
+        color: #ffffff;
+
+        background:
+            linear-gradient(
+                rgba(120, 32, 10, 0.92),
+                rgba(215, 71, 23, 0.92)
+            ),
+            url("images/spices-cta.jpg");
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    .about-cta-container {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .about-cta h2 {
+        font-size: clamp(35px, 5vw, 55px);
+        line-height: 1.15;
+        margin-bottom: 20px;
+    }
+
+    .about-cta p {
+        font-size: 17px;
+        color: #fff3e4;
+        margin-bottom: 30px;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 15px 32px;
+        background: #ffd54a;
+        color: #4a1f12;
+        text-decoration: none;
+        font-weight: 800;
+        border-radius: 50px;
+        transition: 0.3s ease;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-3px);
+        background: #ffffff;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+        .values-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .quality-container {
+            grid-template-columns: 1fr;
+            gap: 45px;
+        }
+
+        .quality-image {
+            order: -1;
+        }
+
+        .why-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+
+    @media (max-width: 500px) {
+
+        .values-section,
+        .quality-section,
+        .why-section,
+        .about-cta {
+            padding: 70px 6%;
+        }
+
+        .quality-image img {
+            height: 350px;
+            border-radius: 18px;
+        }
+
+        .why-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .value-card {
+            padding: 32px 22px;
+        }
+
+        .about-cta h2 {
+            font-size: 36px;
+        }
+    }
+</style>
+
+
+<!-- =========================
+     OUR VALUES
+========================== -->
+
+<section class="values-section">
+
+    <div class="values-header">
+
+        <div class="section-label">
+            What We Believe
+        </div>
+
+        <h2>
+            Our Values Make Every
+            <span>Blend Special</span>
+        </h2>
+
+        <p>
+            We keep things simple — quality ingredients, authentic flavors
+            and a commitment to bringing the best spices to your kitchen.
+        </p>
+
+    </div>
+
+
+    <div class="values-grid">
+
+        <div class="value-card">
+
+            <div class="value-icon">✦</div>
+
+            <h3>Authentic Taste</h3>
+
+            <p>
+                Traditional flavors inspired by the rich culinary heritage
+                of India.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-icon">✓</div>
+
+            <h3>Quality First</h3>
+
+            <p>
+                We carefully select our ingredients to maintain freshness,
+                aroma and consistent quality.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-icon">♥</div>
+
+            <h3>Made With Care</h3>
+
+            <p>
+                Every blend is prepared with attention to detail and a
+                genuine love for good food.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     QUALITY PROMISE
+========================== -->
+
+<section class="quality-section">
+
+    <div class="quality-container">
+
+        <div class="quality-content">
+
+            <div class="section-label">
+                Our Promise
+            </div>
+
+            <h2>
+                From Our Selection
+                <span>To Your Kitchen</span>
+            </h2>
+
+            <p>
+                We believe that spices should do more than add colour.
+                They should bring aroma, depth and unforgettable taste
+                to every meal.
+            </p>
+
+            <ul class="quality-list">
+
+                <li>
+                    <span class="quality-check">✓</span>
+                    Carefully selected ingredients
+                </li>
+
+                <li>
+                    <span class="quality-check">✓</span>
+                    Rich aroma and authentic flavour
+                </li>
+
+                <li>
+                    <span class="quality-check">✓</span>
+                    Traditional-inspired spice blends
+                </li>
+
+                <li>
+                    <span class="quality-check">✓</span>
+                    Quality you can trust
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="quality-image">
+
+            <img
+                src="images/spices-quality.jpg"
+                alt="Premium Indian spices"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHY CHOOSE US
+========================== -->
+
+<section class="why-section">
+
+    <div class="why-container">
+
+        <div class="section-label">
+            Why Namma Spices
+        </div>
+
+        <h2>
+            Simple Ingredients.
+            <br>
+            Big Flavours.
+        </h2>
+
+
+        <div class="why-grid">
+
+            <div class="why-item">
+                <div class="why-number">01</div>
+                <h3>Authentic Blends</h3>
+            </div>
+
+            <div class="why-item">
+                <div class="why-number">02</div>
+                <h3>Fresh Ingredients</h3>
+            </div>
+
+            <div class="why-item">
+                <div class="why-number">03</div>
+                <h3>Rich Flavour</h3>
+            </div>
+
+            <div class="why-item">
+                <div class="why-number">04</div>
+                <h3>Made With Care</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL CTA
+========================== -->
+
+<section class="about-cta">
+
+    <div class="about-cta-container">
+
+        <h2>
+            Bring the Taste of India Home
+        </h2>
+
+        <p>
+            Discover our range of authentic spice blends and add a little
+            more flavour to every meal.
+        </p>
+
+        <a href="#products" class="cta-button">
+            Explore Our Spices
+        </a>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
